@@ -18,7 +18,7 @@ class Testing {
         options.addArguments("--headless"); // !!!should be enabled for Jenkins
         options.addArguments("--disable-dev-shm-usage"); // !!!should be enabled for Jenkins
         options.addArguments("--window-size=1920x1080"); // !!!should be enabled for Jenkins
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
         Thread.sleep(3000);
